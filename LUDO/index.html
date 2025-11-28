@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ludo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #22409a;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+      }
+      h2 {
+        margin-top: 30px;
+        color: black;
+        font-weight: 300;
+      }
+
+      .ludo-container {
+        display: grid;
+        grid-template-columns: 500px 500px;
+        grid-template-rows: 300px 300px;
+        background-color: rgb(13, 10, 3);
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .dice-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        font-size: 2rem;
+      }
+      button {
+        padding: 30px 50px;
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #000000;
+        border: 2px solid #000000;
+        font-weight: bold;
+        border-radius: 8px;
+      }
+      .dice:hover {
+        transform: rotate(360deg) skew(10deg, 5deg);
+        transition: transform 0.5s ease;
+      }
+      .options {
+        text-align: center;
+        display: flex;
+        gap: 10px;
+      }
+      #reset {
+        padding: 10px 60px;
+        position: relative;
+        bottom: 20px;
+      }
+      #four {
+        padding: 10px 60px;
+        position: relative;
+        bottom: 20px;
+      }
+      p {
+        background-color: rgb(95, 85, 85);
+        color: white;
+        width: 120px;
+        text-align: center;
+      }
+      .cnt-1 {
+        background-color: rgba(17, 0, 255, 0.912);
+      }
+      .cnt-2 {
+        background-color: red;
+      }
+      .cnt-3 {
+        background-color: rgb(164, 164, 47);
+      }
+      .cnt-4 {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>LUDO PROTOTYPE</h2>
+
+    <div class="ludo-container">
+      <div class="dice-container cnt-1">
+        <p id="disp-1">0</p>
+        <button id="btn-1" class="dice">ROLL</button>
+      </div>
+      <div class="dice-container cnt-2">
+        <p id="disp-2">0</p>
+        <button id="btn-2" class="dice">ROLL</button>
+      </div>
+
+      <div class="dice-container cnt-3">
+        <p id="disp-3">0</p>
+        <button id="btn-3" class="dice">ROLL</button>
+      </div>
+
+      <div class="dice-container cnt-4">
+        <p id="disp-4">0</p>
+        <button id="btn-4" class="dice">ROLL</button>
+      </div>
+    </div>
+    <div class="options">
+      <button id="reset">RESET ALL</button>
+      <button id="four">ALL FOUR</button>
+    </div>
+
+    <script>
+      let btn1 = document.getElementById("btn-1");
+      let btn2 = document.getElementById("btn-2");
+      let btn3 = document.getElementById("btn-3");
+      let btn4 = document.getElementById("btn-4");
+
+      let txt1 = document.getElementById("disp-1");
+      let txt2 = document.getElementById("disp-2");
+      let txt3 = document.getElementById("disp-3");
+      let txt4 = document.getElementById("disp-4");
+
+      // fun to generate random number
+      const getRandomNum = () => {
+        return Math.floor(Math.random() * 6) + 1;
+      };
+
+      btn1.addEventListener("mouseover", () => {
+        txt1.textContent = getRandomNum();
+      });
+
+      btn2.addEventListener("mouseover", () => {
+        txt2.textContent = getRandomNum();
+      });
+
+      btn3.addEventListener("mouseover", () => {
+        txt3.textContent = getRandomNum();
+      });
+
+      btn4.addEventListener("mouseover", () => {
+        txt4.textContent = getRandomNum();
+      });
+
+      // reset all the displays
+      document.getElementById("reset").addEventListener("mouseover", () => {
+        txt1.textContent = 0;
+        txt2.textContent = 0;
+        txt3.textContent = 0;
+        txt4.textContent = 0;
+      });
+
+      // common button to display random values in all the four dice containers
+
+      document.getElementById("four").addEventListener("mouseover", () => {
+        txt1.textContent = getRandomNum();
+        txt2.textContent = getRandomNum();
+        txt3.textContent = getRandomNum();
+        txt4.textContent = getRandomNum();
+      });
+    </script>
+  </body>
+</html>
