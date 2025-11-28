@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GST Calci</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>GST CALCI</h2>
+    <div class="calci-container">
+      <div class="amount-container ct">
+        <label for="amount">Amount</label>
+        <input type="number" id="amnt" />
+        <div class="amt-disp">
+          <p id="amt-disp">₹0</p>
+          <span>Actual Amount</span>
+        </div>
+      </div>
+      <div class="gst-container ct">
+        <label for="GST">GST%</label>
+        <select name="percentages" id="percentages">
+          <option value="5">5%</option>
+          <option value="12">12%</option>
+          <option value="18">18%</option>
+          <option value="28">28%</option>
+        </select>
+        <div class="gst-disp">
+          <p id="gst-disp">₹0</p>
+          <span>GST Amount</span>
+        </div>
+      </div>
+      <div class="tax-container ct">
+        <label>Tax</label>
+        <select name="" id="tax-option">
+          <option value="inclusive">Inclusive</option>
+          <option value="exclusive">Exclusive</option>
+        </select>
+        <div class="total-amt-disp">
+          <p id="total-amt-disp">₹0</p>
+          <span>Total Amount</span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
