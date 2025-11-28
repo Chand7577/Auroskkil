@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  background-image: url("https://wallpapers.com/images/hd/ludo-king-blue-squares-background-f2l0zc9t3trvwxxz.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+h2 {
+  margin-top: 30px;
+  color: black;
+  font-weight: 300;
+}
+
+.ludo-container {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 300px 300px;
+  background-color: rgb(13, 10, 3);
+  padding: 10px;
+  border-radius: 10px;
+}
+.dice-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 2rem;
+}
+button {
+  padding: 30px 50px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  font-weight: bold;
+  border-radius: 8px;
+}
+.dice:hover {
+  transform: rotate(360deg) skew(10deg, 5deg);
+  transition: transform 0.5s ease;
+}
+.options {
+  text-align: center;
+  display: flex;
+  gap: 10px;
+}
+#reset {
+  padding: 10px 60px;
+  position: relative;
+  bottom: 20px;
+}
+#four {
+  padding: 10px 60px;
+  position: relative;
+  bottom: 20px;
+}
+p {
+  background-color: rgb(95, 85, 85);
+  color: white;
+  width: 120px;
+  text-align: center;
+}
+.cnt-1 {
+  background-color: rgba(17, 0, 255, 0.912);
+}
+.cnt-2 {
+  background-color: red;
+}
+.cnt-3 {
+  background-color: rgb(164, 164, 47);
+}
+.cnt-4 {
+  background-color: green;
+}
