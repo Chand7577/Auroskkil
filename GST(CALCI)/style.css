@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.calci-container {
+  max-width: 900px;
+  padding: 50px 70px;
+  margin: 120px auto;
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #f9faff;
+  border-radius: 7px;
+  box-shadow: 0 4px 4px 0 #f2f3f2;
+}
+.ct {
+  width: 50%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ct label {
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+.ct > input {
+  padding: 15px 15px;
+  margin-top: 20px;
+}
+.ct > select {
+  padding: 15px 15px;
+  margin-top: 20px;
+}
+#amt-disp {
+  font-size: 2.5rem;
+}
+#gst-disp {
+  font-size: 2.5rem;
+}
+#total-amt-disp {
+  font-size: 2.5rem;
+}
+
+.amt-disp {
+  text-align: center;
+  position: relative;
+  top: 30px;
+}
+.gst-disp {
+  text-align: center;
+  position: relative;
+  top: 30px;
+}
+.total-amt-disp {
+  text-align: center;
+  position: relative;
+  top: 30px;
+}
+.amt-disp span {
+  color: #0000bf;
+}
+.gst-disp span {
+  color: #038603;
+}
+.total-amt-disp span {
+  color: #0000bf;
+}
